@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_coun_if.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itahri <itahri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/13 17:10:16 by itahri            #+#    #+#             */
-/*   Updated: 2024/05/13 21:16:59 by itahri           ###   ########.fr       */
+/*   Created: 2024/05/13 21:17:44 by itahri            #+#    #+#             */
+/*   Updated: 2024/05/13 21:24:35 by itahri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_count_if(char **tab, int (*f)(char*))
 {
 	int	i;
+	int	count;
 
 	i = 0;
-	while (str[i])
+	count = 0;
+	while (tab[i])
+	{
+		if (f(tab[i]) == 1)
+			count++;
 		i++;
-	return (i);
+	}
+	return (count);
 }

@@ -6,17 +6,17 @@
 /*   By: itahri <itahri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 17:42:07 by itahri            #+#    #+#             */
-/*   Updated: 2024/05/13 18:03:56 by itahri           ###   ########.fr       */
+/*   Updated: 2024/05/13 18:50:33 by itahri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int ascii_order(const char *str)
+int	ascii_order(const char *str)
 {
-	int total;
+	int	total;
 	int	i;
-	
+
 	i = 0;
 	total = 1;
 	while (str[i])
@@ -27,25 +27,35 @@ int ascii_order(const char *str)
 	return (total);
 }
 
+void	swap(const char **str1, const char **str2)
+{
+	const char	*buff;
+
+	buff = *str1;
+	*str1 = *str2;
+	*str2 = buff;
+}
+
 void	sorting_args(const char **argv, int argc)
 {
-	int		i;
-	const char	*buff;
+	int	i;
+	int	j;
 
 	i = 1;
 	while (i < argc - 1)
 	{
-		if (ascii_order(argv[i]) > ascii_order(argv[i + 1]))
+		j = 1;
+		while (j < argc - i)
 		{
-			buff = argv[i];
-			argv[i] = argv[i + 1];
-			argv[i + 1] = buff;
+			if (ascii_order(argv[j]) > ascii_order(argv[j + 1]))
+				swap(&argv[j], &argv[j + 1]);
+			j++;
 		}
 		i++;
 	}
 }
 
-int main(int argc, char const *argv[])
+int	main(int argc, char const *argv[])
 {
 	int		i;
 	int		j;
@@ -61,7 +71,7 @@ int main(int argc, char const *argv[])
 			j++;
 		}
 		write(1, "\n", 1);
-		i++;	
+		i++;
 	}
-	return 0;
+	return (0);
 }

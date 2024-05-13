@@ -1,21 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itahri <itahri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/13 17:10:16 by itahri            #+#    #+#             */
-/*   Updated: 2024/05/13 21:16:59 by itahri           ###   ########.fr       */
+/*   Created: 2024/05/13 20:25:56 by itahri            #+#    #+#             */
+/*   Updated: 2024/05/13 20:35:48 by itahri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	i;
+#ifndef FT_ABS_H
+# define FT_ABS_H
+# define ABS(Value) ((Value) < 0 ? -(Value) : (Value))
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+#endif
