@@ -6,7 +6,7 @@
 /*   By: itahri <itahri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 12:43:44 by itahri            #+#    #+#             */
-/*   Updated: 2024/05/14 15:54:14 by itahri           ###   ########.fr       */
+/*   Updated: 2024/05/14 16:02:35 by itahri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ static void	write_file(int fd)
 	int		nb_read;
 	char	buff[100];
 
+	nb_read = -1;
 	while (nb_read != 0)
 	{
 		nb_read = read(fd, buff, sizeof(buff));
@@ -39,4 +40,5 @@ int	main(int argc, char *argv[])
 		return (write(2, "File name missing.\n", 19), 0);
 	fd = open(argv[1], O_RDONLY);
 	write_file(fd);
+	return (0);
 }
