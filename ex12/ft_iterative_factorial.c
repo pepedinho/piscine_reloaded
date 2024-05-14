@@ -6,7 +6,7 @@
 /*   By: itahri <itahri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 16:40:58 by itahri            #+#    #+#             */
-/*   Updated: 2024/05/14 15:37:29 by itahri           ###   ########.fr       */
+/*   Updated: 2024/05/14 15:57:07 by itahri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int	ft_iterative_factorial(int nb)
 
 	i = 1;
 	result = 1;
-	
 	if (nb == 0)
 		return (1);
 	else if (nb < 0)
