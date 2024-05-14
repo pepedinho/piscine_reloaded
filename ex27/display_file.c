@@ -6,7 +6,7 @@
 /*   By: itahri <itahri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 12:43:44 by itahri            #+#    #+#             */
-/*   Updated: 2024/05/14 16:02:35 by itahri           ###   ########.fr       */
+/*   Updated: 2024/05/14 17:55:41 by itahri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void	write_file(int fd)
 		nb_read = read(fd, buff, sizeof(buff));
 		if (nb_read < 0)
 		{
-			write(2, "Cannot read file.\n", 19);
+			write(2, "Cannot read file.\n", 18);
 			return ;
 		}
 		write(1, buff, nb_read);

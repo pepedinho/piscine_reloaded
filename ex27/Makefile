@@ -6,11 +6,11 @@
 #    By: itahri <itahri@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/14 13:21:19 by itahri            #+#    #+#              #
-#    Updated: 2024/05/14 13:22:11 by itahri           ###   ########.fr        #
+#    Updated: 2024/05/14 17:53:30 by itahri           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
+CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -37,3 +37,7 @@ clean:
 # Clean the object files and the executable
 fclean: clean
 	rm -f $(NAME)
+
+re : fclean all
+
+.PHONY : all clean fclean re
