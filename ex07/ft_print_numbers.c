@@ -6,11 +6,13 @@
 /*   By: itahri <itahri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 14:57:33 by itahri            #+#    #+#             */
-/*   Updated: 2024/05/13 16:29:14 by itahri           ###   ########.fr       */
+/*   Updated: 2024/05/14 12:38:17 by itahri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+void	ft_putchar(char c);
 
 void	ft_print_number(void)
 {
@@ -19,7 +21,7 @@ void	ft_print_number(void)
 	nbr = '0';
 	while (nbr <= '9')
 	{
-		write(1, &nbr, 1);
+		ft_putchar(nbr);
 		nbr++;
 	}
 }

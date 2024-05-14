@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   display_file.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itahri <itahri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/13 16:29:59 by itahri            #+#    #+#             */
-/*   Updated: 2024/05/14 12:39:42 by itahri           ###   ########.fr       */
+/*   Created: 2024/05/14 12:45:40 by itahri            #+#    #+#             */
+/*   Updated: 2024/05/14 12:57:43 by itahri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef DISPLAY_FILE_H
+# define DISPLAY_FILE_H
 
-void	ft_putchar(char c);
+# include <unistd.h>
+# include <fcntl.h>
 
-void	ft_is_negative(int n)
-{
-	if (n <= 0)
-		ft_putchar('N');
-	else
-		ft_putchar('P');
-}
+#endif

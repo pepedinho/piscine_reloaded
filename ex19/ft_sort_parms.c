@@ -6,11 +6,13 @@
 /*   By: itahri <itahri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 17:42:07 by itahri            #+#    #+#             */
-/*   Updated: 2024/05/13 18:50:33 by itahri           ###   ########.fr       */
+/*   Updated: 2024/05/14 12:42:09 by itahri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+void	ft_putchar(char c);
 
 int	ascii_order(const char *str)
 {
@@ -67,7 +69,7 @@ int	main(int argc, char const *argv[])
 		j = 0;
 		while (argv[i][j])
 		{
-			write(1, &argv[i][j], 1);
+			ft_putchar(argv[i][j]);
 			j++;
 		}
 		write(1, "\n", 1);
