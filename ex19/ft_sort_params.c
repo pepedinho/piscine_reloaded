@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_parms.c                                    :+:      :+:    :+:   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itahri <itahri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 17:42:07 by itahri            #+#    #+#             */
-/*   Updated: 2024/05/14 15:31:39 by itahri           ###   ########.fr       */
+/*   Updated: 2024/05/14 15:43:14 by itahri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-int	ascii_order(const char *str)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	int	total;
 	int	i;
 
 	i = 0;
-	total = 1;
-	while (str[i])
-	{
-		total += str[i];
+	while (s1[i] == s2[i] && s1[i] && s2[i])
 		i++;
-	}
-	return (total);
+	return (s1[i] - s2[i]);
 }
 
 void	swap(const char **str1, const char **str2)
@@ -47,7 +42,7 @@ void	sorting_args(const char **argv, int argc)
 		j = 1;
 		while (j < argc - i)
 		{
-			if (ascii_order(argv[j]) > ascii_order(argv[j + 1]))
+			if (ft_strcmp(argv[j], argv[j + 1]) > 0)
 				swap(&argv[j], &argv[j + 1]);
 			j++;
 		}
