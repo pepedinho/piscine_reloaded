@@ -6,7 +6,7 @@
 /*   By: itahri <itahri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 17:22:42 by itahri            #+#    #+#             */
-/*   Updated: 2024/05/14 12:41:03 by itahri           ###   ########.fr       */
+/*   Updated: 2024/05/14 13:43:29 by itahri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(int argc, char const *argv[])
 			ft_putchar(argv[i][j]);
 			j++;
 		}
-		write(1, "\n", 1);
+		ft_putchar('\n');
 		i++;
 	}
 	return (0);

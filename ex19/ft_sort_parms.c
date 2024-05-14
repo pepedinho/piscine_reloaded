@@ -6,11 +6,9 @@
 /*   By: itahri <itahri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 17:42:07 by itahri            #+#    #+#             */
-/*   Updated: 2024/05/14 12:42:09 by itahri           ###   ########.fr       */
+/*   Updated: 2024/05/14 14:23:39 by itahri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 void	ft_putchar(char c);
 
@@ -72,7 +70,7 @@ int	main(int argc, char const *argv[])
 			ft_putchar(argv[i][j]);
 			j++;
 		}
-		write(1, "\n", 1);
+		ft_putchar('\n');
 		i++;
 	}
 	return (0);

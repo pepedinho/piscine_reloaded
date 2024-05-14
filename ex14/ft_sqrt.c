@@ -6,20 +6,21 @@
 /*   By: itahri <itahri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 16:58:56 by itahri            #+#    #+#             */
-/*   Updated: 2024/05/13 17:07:42 by itahri           ###   ########.fr       */
+/*   Updated: 2024/05/14 14:22:24 by itahri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_sqrt(int nb)
 {
-	int	div;
+	int	x;
+	int	y;
 
-	div = nb / 2;
-	while (div)
+	x = nb;
+	y = (x + 1) / 2;
+	while (y < x)
 	{
-		if (div * div == nb)
-			return (div);
-		div --;
+		x = y;
+		y = (x + nb / x) / 2;
 	}
-	return (0);
+	return (x);
 }

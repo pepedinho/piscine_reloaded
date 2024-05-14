@@ -6,18 +6,16 @@
 /*   By: itahri <itahri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 16:29:59 by itahri            #+#    #+#             */
-/*   Updated: 2024/05/14 12:39:42 by itahri           ###   ########.fr       */
+/*   Updated: 2024/05/14 13:51:36 by itahri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 void	ft_putchar(char c);
 
 void	ft_is_negative(int n)
 {
-	if (n <= 0)
-		ft_putchar('N');
-	else
+	if (n >= 0)
 		ft_putchar('P');
+	else
+		ft_putchar('N');
 }

@@ -6,15 +6,13 @@
 /*   By: itahri <itahri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 14:57:33 by itahri            #+#    #+#             */
-/*   Updated: 2024/05/14 12:38:17 by itahri           ###   ########.fr       */
+/*   Updated: 2024/05/14 14:06:41 by itahri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 void	ft_putchar(char c);
 
-void	ft_print_number(void)
+void	ft_print_numbers(void)
 {
 	char	nbr;
 
