@@ -6,7 +6,7 @@
 /*   By: itahri <itahri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 12:43:44 by itahri            #+#    #+#             */
-/*   Updated: 2024/05/14 14:40:03 by itahri           ###   ########.fr       */
+/*   Updated: 2024/05/14 14:46:35 by itahri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,8 @@ static void	write_file(int fd)
 
 int	main(int argc, char *argv[])
 {
-	char	buff[99999];
-	int		nb_read;
 	int		fd;
-	int		i;
 
-	i = 0;
 	if (argc > 2)
 		return (write(1, "Too many arguments.", 19), 0);
 	else if (argc < 2)
